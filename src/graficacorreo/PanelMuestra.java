@@ -26,6 +26,7 @@ public class PanelMuestra extends JDialog{
     
     private DefaultTableModel dtm;
     private PanelCorreo correo1;
+    private ListaCorreo email;
     
     public PanelMuestra(PanelCorreo correo) {
         this.correo1 = correo;
@@ -53,7 +54,7 @@ public class PanelMuestra extends JDialog{
     }
     
     public void actualizarTabla() {
-         List<ListaCorreo> lista = this.correo1.getListaCorreo();
+         List<String> lista = correo1.getListaCorreo();
          for (ListaCorreo email1 : lista) {
              Object[] fila = {email1.getCorreo()};
              dtm.addRow(fila);
